@@ -1,0 +1,46 @@
+name: Something is wrong
+description: AuxTray did something unexpected, or does not handle your air conditioner
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time. AuxTray has been used with one model in one home, so a report from yours is how it gets better.
+
+        Please do not paste passwords, your account name, or anything else you would not want public. The diagnostics text has none of those.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics
+      description: Report a Problem… in AuxTray fills this in for you. By hand, open the menu behind the ⋯ button, choose Copy Diagnostics, and paste here.
+      render: text
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: The unit's model
+      description: As printed on the unit's label or its box, if you know it. For example HM18HO25INV.
+  - type: dropdown
+    id: region
+    attributes:
+      label: The region you signed in with
+      options:
+        - Other regions (Saudi Arabia, USA and most others)
+        - Europe
+        - Russia
+        - Mainland China
+  - type: dropdown
+    id: phone-app
+    attributes:
+      label: Does the AC Freedom phone app do the same thing right?
+      options:
+        - "Yes"
+        - "No, it has the same problem"
+        - I have not tried
